@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Convergent Messenger
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front-end for the Convergent Messenger demo app. It is built on React and connects to your Firebase project.
 
-## Available Scripts
+## Setting Up
 
-In the project directory, you can run:
+First, you'll need to install the project dependencies. Open your terminal and navigate to this `client` folder. Afterwards, run the following command based on your JavaScript package manager of choice:
 
-### `yarn start`
+### `npm install` for NPM users
+### `yarn install` for Yarn users
 
-Runs the app in the development mode.\
+If you don't know what package manger you have, run `npm -v` or `yarn -v`. If you have either of the package managers installed, you'll see the installed version number in your terminal. Otherwise, the command will fail.
+
+Afterwards, you'll need to create an `env` file, managing global variables this project uses. This `env` file will store your firebase and algolia credentials used by the app. Without this, the app won't be able to use either of the services.
+
+To get started, create a new file in your project folder, and name it `.env`. In `.env`, you'll then want to define the following variables. Substitute everything to the right of the equals sign with the actual string values, no quotes.
+
+```
+REACT_APP_ALGOLIA_APP_ID=<your algolia app id here>
+REACT_APP_ALGOLIA_SEARCH_KEY=<your algolia search key here>
+
+REACT_FIREBASE_API_KEY=<your firebase api key here>
+REACT_FIREBASE_AUTH_DOMAIN=<your firebase auth domain here>
+REACT_FIREBASE_PROJECT_ID=<your firebase project id here>
+REACT_FIREBASE_STORAGE_BUCKET=<your firebase storage bucket url here>
+REACT_FIREBASE_MESSAGING_SENDING_ID=<your firebase messaging sending id here>
+REACT_FIREBASE_APP_ID=<your firebase app id here>
+```
+
+You can find these values through looking at your project configs within each service's dashboard.
+
+For Algolia Search, log into your developer account and navigate to your developer dashboard. Go to the **API Keys** page, and copy your keys to the `.env` file.
+
+![Algolia API Keys Page](../docs/client/algolia.png?raw=true)
+
+For Firebase, navigate to your project dashboard and go to the project settings page, marked by the settings icon on the top left corner of the page, in the nav bar. In the **General** Tab, scroll down to **Your Apps** and retrieve your app configuration.
+
+![Firebase App Config Page](../docs/client/firebase.png?raw=true)
+
+If you don't see **Your Apps**, you may need to create a new App. Click on the **Add App** button. You'll be greeted with a list of platforms. Choose Web, register your app name (this is a developer name, won't affect anything front-facing), and you should see your Firebase Config on the last step. 
+
+![Firebase App Platform Modal](../docs/client/create_app_firebase_modal.png?raw=true)
+
+## Starting the Project
+
+In the project directory, you can start the app via the following commands:
+
+### `npm start` for NPM users
+### `yarn start` for Yarn users
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Now What?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a very comprehensive project, and it can be intimidating for a new developer to read over. To help, I've commented the project, created a slide deck going over the app itself, and have compiled a list of resources to get up to speed in the main doc.
 
-### `yarn build`
+### Slide Deck
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+{ insert slide deck here }
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Code Examples
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want to look at important examples of code within the project, here are some good places to start:
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [src/App.tsx](src/App.tsx)
+- [src/components/ConversationChatbox.tsx](src/components/ConversationChatbox.tsx)
+- [src/components/Navbar.tsx](src/components/Navbar.tsx)
+- [src/components/SearchInput.tsx](src/components/SearchInput.tsx)
+- [src/firebase/database.ts](src/firebase/database.ts)
+- [src/models (look at everything)](src/models)
+- [src/views/authed/AuthedScreens.tsx](src/views/authed/AuthedScreens.tsx)
+- [src/views/authed/ConversationWindow.tsx](src/views/authed/ConversationWindow.tsx)
+- [src/views/nonauthed/LoginScreen.tsx](src/views/nonauthed/LoginScreen.tsx)
+- [src/views/nonauthed/NonAuthedScreens.tsx](src/views/nonauthed/NonAuthedScreens.tsx)

@@ -1,0 +1,113 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.window {
+    margin: auto;
+    width: 500px;
+    padding: 16px;
+    background: #f8f8f8;
+    border-radius: 16px;
+}
+
+.inputBox {
+    margin: 16px 0;
+}
+
+.inputLabelGroup {
+    width: 450px;
+    margin: 16px auto;
+}
+
+.inputLabel {
+    margin: 4px 0;
+    display: block;
+}
+
+.textInput {
+    display: block;
+    padding: 8px;
+    font: 16px "Lato", sans-serif;
+    width: 100%;
+    background: #fff;
+    border: none;
+    transition: all 0.25s;
+}
+
+.textInput:focus {
+    outline: #e0e0e0 solid 2px;
+    background: #f0f0f0;
+}
+
+.signupLinkContainer {
+    padding: 4px;
+    text-align: center;
+}
+
+.buttons {
+    margin: 16px 0;
+}
+
+.loginButton,
+.googleButton,
+.facebookButton {
+    display: block;
+    margin: 8px auto;
+    padding: 16px;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 18px "Lato", sans-serif;
+    border-width: 2px;
+    border-style: solid;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.loginButton {
+    background: #0facf3;
+    border-color: #109fe0;
+    color: #fff;
+}
+
+.loginButton:hover {
+    background: #109fe0;
+}
+
+.googleButton {
+    background: #e8e8e8;
+    border-color: #dcdcdc;
+}
+
+.googleButton:hover {
+    background: #dcdcdc;
+}
+
+.facebookButton {
+    background: #4267b2;
+    border-color: #365696;
+    color: #fff;
+}
+
+.facebookButton:hover {
+    background: #365696;
+}
+
+.buttonSvg {
+    width: 24px;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.error {
+    font-size: 14px;
+    text-align: center;
+    color: rgb(184, 44, 44);
+}

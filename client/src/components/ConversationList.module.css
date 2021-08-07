@@ -1,0 +1,58 @@
+.link {
+    text-decoration: none;
+}
+
+.link.selected .listItem,
+.listItem:hover {
+    background: #f0f0f0;
+    padding-left: 4px;
+}
+
+.listItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    transition: all 0.25s;
+}
+
+.listItemPicture {
+    flex: 0;
+    flex-basis: 32px;
+    margin: 8px;
+}
+
+.listItemPicture img {
+    width: 32px;
+    border-radius: 32px;
+}
+
+.listItemText {
+    flex: 1;
+    margin: 8px;
+}
+
+.listItemPreview {
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.listItemName {
+    margin: 0 0 4px;
+    font-weight: 400;
+}
+
+.listItemMessagePreview {
+    display: inline-block;
+    color: #606060;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+}
+
+.listItemLastSent {
+    color: #808080;
+}

@@ -1,0 +1,193 @@
+.conversationContainer {
+    width: 100%;
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.conversationContainer.left {
+    flex-direction: row;
+}
+
+.conversationProfile {
+    flex: 0;
+    flex-basis: 32px;
+}
+
+.conversationProfile img {
+    width: 100%;
+    border-radius: 32px;
+}
+
+.conversationBubbleContainer {
+    max-width: 575px;
+}
+
+.left .conversationBubble {
+    color: #f6f6f6;
+    background: #0facf3;
+}
+
+.conversationBubble {
+    margin: 0 8px 10px;
+    padding: 12px;
+    border-radius: 6px;
+    position: relative;
+    background: #e8e8e8;
+    max-width: 450px;
+}
+
+.conversationBubble:hover {
+    background: #e0e0e0;
+}
+
+.left .conversationBubble:hover {
+    background: #109fe0;
+}
+
+.bubbleReaction {
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    z-index: 1;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.25s;
+    animation: popIn 0.25s;
+    animation-timing-function: cubic-bezier(0, 1.78, 1, 1.04);
+}
+
+.bubbleReaction:hover {
+    transform: translateY(1px);
+}
+
+.bubbleReaction:active {
+    transform: translateY(2px);
+}
+
+.left .bubbleReaction {
+    right: 0;
+}
+
+.conversationTimestamp {
+    font-size: 12px;
+    text-align: right;
+    color: #808080;
+}
+
+.left .conversationTimestamp {
+    text-align: left;
+}
+
+.bubbleContainer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.conversationMedia {
+    max-width: 400px;
+    margin: 0 8px 8px;
+}
+
+.conversationMedia img {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.left .bubbleContainer {
+    flex-direction: row;
+}
+
+.bubbleOperations {
+    display: none;
+}
+
+.bubbleContainer:hover .bubbleOperations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s;
+}
+
+.bubbleOperations button {
+    background: none;
+    border: none;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.bubbleOperations button:hover {
+    transform: translateY(1px);
+}
+
+.bubbleOperations button:active {
+    transform: translateY(2px);
+}
+
+.emojiOperation {
+    margin-bottom: 4px;
+    filter: grayscale(1);
+}
+
+.sentimentBubble {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    color: #fff;
+    right: 0;
+    z-index: 100;
+    border-radius: 6px;
+    text-align: center;
+    width: 90px;
+}
+
+.conversationBubble:hover .sentimentBubble {
+    display: block;
+    animation: fadeIn 0.25s;
+}
+
+.sentimentBubble::before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    bottom: 100%;
+    width: 0;
+    border: 6px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.6);
+    right: 8px;
+}
+
+.left .sentimentBubble {
+    left: 0;
+}
+.left .sentimentBubble::before {
+    left: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

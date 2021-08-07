@@ -1,0 +1,144 @@
+.modalOverlay {
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fade 0.5s;
+}
+
+.closeOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 16px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.closeOverlay:hover {
+    transform: translateY(2px);
+    color: #e8e8e8;
+}
+
+.flexWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 90%;
+    max-width: 600px;
+    background: #f8f8f8;
+    border: 2px solid #a0a0a0;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modalHead {
+    padding: 16px;
+    background: #e0e0e0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalHeadImage {
+    width: 64px;
+}
+
+.modalBody {
+    padding: 24px;
+}
+
+.inputGroupHeader {
+    color: #484848;
+    margin: 4px 0;
+}
+
+.inputGroup {
+    display: flex;
+    margin: 16px auto;
+}
+
+.inputGroup input[type="text"] {
+    flex: 1;
+    margin-right: 8px;
+    font: 16px "Lato", sans-serif;
+    color: #606060;
+    padding: 4px;
+    border: 1px solid #a0a0a0;
+    background: #fff;
+    transition: all 0.25s ease;
+}
+
+.inputGroup input[type="text"]:focus {
+    background: #fcfcfc;
+    outline-width: 2px;
+    outline-color: #a0a0a0;
+}
+
+.inputGroup button {
+    padding: 8px;
+    white-space: nowrap;
+    background: #0facf3;
+    border: 2px solid #0d87c0;
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+.inputGroup button:disabled {
+    background: #f4f4f5;
+    border: 2px solid #c3c5c5;
+    color: rgb(170, 170, 170);
+}
+
+.inputGroup button:hover:enabled {
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+.inputGroup button:active:enabled {
+    filter: brightness(0.8);
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.changeNameButton {
+    flex: 0;
+}
+
+.uploadProfileButton,
+.deleteAccountButton {
+    flex: 1;
+}
+
+.uploadProfileButton {
+    margin-right: 4px;
+}
+
+.inputGroup button.deleteAccountButton {
+    margin-left: 4px;
+    background: #da4747;
+    border-color: #9e3e3e;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opaciity: 1;
+    }
+}

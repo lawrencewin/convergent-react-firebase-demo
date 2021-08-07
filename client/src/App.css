@@ -1,3 +1,43 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #606060;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #303030;
+}
+
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 14px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }

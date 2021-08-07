@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "<insert your firebase project id here>"
+  }
+}
