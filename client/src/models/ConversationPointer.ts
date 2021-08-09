@@ -4,6 +4,7 @@ import { ConversationInFirestore } from "./Conversation"
 import { User } from "./User"
 import { getUser } from "../firebase"
 
+// TODO: Figure out how to mark something as "unread" in this data model.
 export interface ConversationPointerInFirestore {
     // The string id of the user we're talking to
     recipientUid: string

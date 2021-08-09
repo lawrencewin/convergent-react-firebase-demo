@@ -72,6 +72,6 @@ This will take a little bit of time, but within minutes, you will have a working
 
 ## What Next
 
-To wrap your head around the project, I've created a slide deck which gives an overview of Convergent Messenger as well as an overview of the cloud functions themselves.
+To wrap your head around the project, I've created a slide deck which gives an overview of Convergent Messenger as well as an overview of the cloud functions themselves. This can be found on the [main doc](../README.md).
 
 You can also view the code for comments, and you can view some good general resources on firebase / cloud functions below.

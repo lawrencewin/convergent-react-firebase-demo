@@ -80,6 +80,8 @@ Here are general resources to get you up to speed in terms of Firebase and React
 - [freeCodeCamp - To-Do Application With React/Firebase](https://www.freecodecamp.org/news/how-to-build-a-todo-application-using-reactjs-and-firebase/)
 - [freeCodeCamp - Full Stack React / Firebase Social Media App (WARNING: Very long YouTube video)](https://www.youtube.com/watch?v=m_u6P5k0vP0)
 
+Finally, here's a [slide deck](https://docs.google.com/presentation/d/1cDhxr-3JPrPcWiP0-6s9MH31-NGIswFtgy_BCyRUTsc/edit?usp=sharing) that goes over the structure of the app.
+
 ## Things to Improve On
 
 - Add support for Group Conversations

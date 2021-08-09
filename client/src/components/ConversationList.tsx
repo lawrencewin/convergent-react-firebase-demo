@@ -37,7 +37,8 @@ interface ConversationListItemProps {
     latestActivity: Date
 }
 
-// Individual conversation item in sidebar, formats date and time from parent
+// Individual conversation item in sidebar, formats date and time from parent.
+// TODO: Figure out how to bold a conversation list item that hasn't been read yet.
 function ConversationListItem({ recipient, activityMessage, latestActivity }: ConversationListItemProps) {
     const [time, setTime] = useState<number>(-1)
     const [unit, setUnit] = useState<string>("")

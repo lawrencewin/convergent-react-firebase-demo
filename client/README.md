@@ -55,11 +55,7 @@ You will also see any lint errors in the console.
 
 ## Now What?
 
-This is a very comprehensive project, and it can be intimidating for a new developer to read over. To help, I've commented the project, created a slide deck going over the app itself, and have compiled a list of resources to get up to speed in the main doc.
-
-### Slide Deck
-
-{ insert slide deck here }
+This is a very comprehensive project, and it can be intimidating for a new developer to read over. To help, I've commented the project, created a slide deck going over the app itself, and have compiled a list of resources to get up to speed. The slide deck and resources can be found on the [main doc](../README.md).
 
 ### Code Examples
 
